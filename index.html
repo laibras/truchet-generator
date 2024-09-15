@@ -26,8 +26,12 @@
         .controls input[type="color"] {
             margin-left: 10px;
         }
+        .controls select {
+            margin-left: 10px;
+        }
         #pattern {
-            margin-top: 20px;
+            width: 800px;
+            height: 800px;
             border: 1px solid #ddd;
         }
     </style>
@@ -40,7 +44,13 @@
         
         <label for="bgColor">Cor do Fundo:</label>
         <input type="color" id="bgColor" name="bgColor" value="#ffffff">
-        
+
+        <label for="patternType">Tipo de Padrão:</label>
+        <select id="patternType">
+            <option value="1">Padrão 1 (Linhas)</option>
+            <option value="2">Padrão 2 (Triângulos)</option>
+        </select>
+
         <button id="generatePattern">Gerar Padrão</button>
         <a id="downloadLink" href="#" download="padrao_truchet.png">
             <button id="downloadPattern">Download do Padrão</button>
@@ -48,7 +58,7 @@
     </div>
     <div id="pattern"></div>
 
-    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
